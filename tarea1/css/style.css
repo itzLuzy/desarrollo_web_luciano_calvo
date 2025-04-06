@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(14, 12, 17);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#actividades {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    
+}
+
+#actividades th {
+    border: 1px solid #dddddd3a;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(27, 26, 31);
+    color: white;
+}
+
+#actividades td {
+    border: 1px solid #dddddd3a;
+    padding: 8px;
+    text-align: center;
+}
+
+#actividades tr:nth-child(even){background-color: #222125;}
+#actividades tr:nth-child(odd){background-color: #28282c;}
+#actividades tr:hover{background-color: #33323a;}
+  
