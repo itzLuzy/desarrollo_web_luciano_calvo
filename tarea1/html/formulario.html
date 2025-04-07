@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar Actividad</title>
+    <script lang="javascript" src="../js/formulario.js"> </script>
+    <link rel="stylesheet" href="../css/formulario.css">
+</head>
+<body>
+    <form class="formulario" id="activity-form">
+        <div>
+            <label for="region-select">Región de la Actividad:</label>
+            <select id="region-select" name="region" onchange="populateComunas()">
+            <option value="">--Elige una opción--</option>
+            </select>
+        </div>
+        <div>
+            <label for="comuna-select">Comuna de la Actividad:</label>
+            <select id="comuna-select" name="comuna">
+            <option value="">--Elige una opción--</option>
+            </select>
+        </div>
+        <div id="sector-input" class="grupo-input">
+            <label for="sector">Sector (opcional)</label>
+            <input id="sector" name="sector" type="text" maxlength="100">
+        </div>
+        <div id="name-input" class="grupo-input">
+            <label for="name">Ingresa tu Nombre</label>
+            <input id="username" name="name" type="text" maxlength="200" required>
+        </div>
+        <div id="mail-input" class="grupo-input">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+        </div>
+        <div id="telefono-input" class="grupo-input">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input id="telefono" name="telefono" type="tel">
+        </div>
+        <div id="contact-input" class="grupo-input">
+            <label for="contacto">Medio(s) de Contacto: </label><br>
+            <input type="checkbox" name="whatsapp" onclick="revisaCheck(this);"> Whatsapp
+            <input id="whatsapp" type="text" name="whatsapp-id" style="display:none;"> <br>
+            <input type="checkbox" name="instagram" onclick="revisaCheck(this);"> Instagram
+            <input id="instagram" type="text" name="instagram-id" style="display:none;"><br>
+            <input type="checkbox" name="telegram" onclick="revisaCheck(this);"> Telegram
+            <input id="telegram" type="text" name="telegram-id" style="display:none;"><br>
+            <input type="checkbox" name="x" onclick="revisaCheck(this);"> X
+            <input id="x" type="text" name="x-id" style="display:none;"><br>
+            <input type="checkbox" name="tiktok" onclick="revisaCheck(this);"> TikTok
+            <input id="tiktok" type="text" name="tiktok-id" style="display:none;"><br>
+            <input type="checkbox" name="pinterest" onclick="revisaCheck(this);"> Pinterest
+            <input id="pinterest" type="text" name="pinterest-id" style="display:none;"><br>
+        </div>
+        <div id="inicio-input" class="grupo-input">
+            <label for="inicio">Fecha y Hora de Inicio</label>
+            <input id="inicio" name="inicio" type="datetime-local" required>
+        </div>
+        <div id="termino-input" class="grupo-input">
+            <label for="termino">Fecha y Hora de Término</label>
+            <input id="termino" name="termino" type="datetime-local">
+        </div>
+        <div id="descripcion-input" class="grupo-input">
+            <label for="descripcion">Descripción</label><br>
+            <textarea name="descripcion" id="descripcion-text" cols="50" rows="10" required></textarea>
+        </div>
+        <div id="tema-input" class="grupo-input">
+            <label for="tema">Tema</label>
+            <select id="tema-select" name="tema" onchange="revisaOtro(this, 'tema-input')" required>
+            <option value="">--Elige una opción--</option>
+            <option value="musica">Música</option>
+            <option value="deporte">Deporte</option>
+            <option value="ciencias">Ciencias</option>
+            <option value="religion">Religión</option>
+            <option value="politica">Política</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="juegos">Juegos</option>
+            <option value="baile">Baile</option>
+            <option value="comida">Comida</option>
+            <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div id="foto-input" class="grupo-input">
+            <label for="foto">Foto(s)</label>
+            <input id="foto" name="foto" type="file">
+        </div>
+        <div class="botones">
+            <button type="button" id="envio">Registrar</button>
+        </div>
+      </form>
+      <script lang="javascript" src="../js/region_comuna.js"> </script>
+</body>
+</html>

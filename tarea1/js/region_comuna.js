@@ -66,3 +66,27 @@ let region_comuna = {
         }
     ]
 };
+
+
+const regionSelect = document.getElementById("region-select");
+const comunaSelect = document.getElementById("comuna-select");
+
+function populateRegiones() {
+    region_comuna.regiones.forEach(region => {
+        const option = document.createElement("option");
+        option.value = region.numero;
+        option.textContent = region.nombre;
+        regionSelect.appendChild(option);
+    });
+}
+populateRegiones();
+function populateComunas() {
+    comunaSelect.value = "";
+    const region = regionSelect.value;
+    region_comuna.regiones[region-1].comunas.forEach(comuna => {
+        const option = document.createElement("option");
+        option.value = comuna.nombre.toLowerCase();
+        option.textContent = comuna.nombre;
+        comunaSelect.appendChild(option);
+    });
+}

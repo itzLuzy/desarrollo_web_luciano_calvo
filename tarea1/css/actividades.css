@@ -1,5 +1,6 @@
 body {
     background-color: rgb(14, 12, 17);
+    background-image: linear-gradient(to bottom, rgb(218, 124, 155), rgb(93, 13, 167));
     font-family: Arial, Helvetica, sans-serif;
 }
 #actividades {
@@ -15,7 +16,7 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: rgb(27, 26, 31);
+    background-color: rgba(27, 26, 31, 0.74);
     color: white;
 }
 
@@ -25,7 +26,7 @@ body {
     text-align: center;
 }
 
-#actividades tr:nth-child(even){background-color: #222125;}
-#actividades tr:nth-child(odd){background-color: #28282c;}
-#actividades tr:hover{background-color: #33323a;}
+#actividades tr:nth-child(even){background-color: #222125c0;}
+#actividades tr:nth-child(odd){background-color: #28282cb9;}
+#actividades tr:hover{background-color: #33323ad3;}
   
